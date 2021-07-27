@@ -1,22 +1,23 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import dummy from '../db/data.json';
+import Word from './Word';
 
 function Day() {
     const {day} = useParams();
-    const wordList = dummy.words.filter(word => (
-        word.day === Number(day)
-    ));
+    const [words, setWords] = useState([]);
+
+    useEffect(()=>{
+        axios.get(`http://localhost:3001/words?day=${day}`).then(res => setWords(res.data))
+        .catch(e => console.log(e));
+    },[day])
     return (
         <>
         <h2>Day {day}</h2>
             <table>
                 <tbody>
-                    {wordList.map(word => (
-                        <tr key={word.id}>
-                            <td>{word.eng}</td>
-                            <td>{word.kor}</td>
-                        </tr>
+                    {words.map(word => (
+                        <Word word={word} key={word.id} />
                     ))}
 
                 </tbody>
