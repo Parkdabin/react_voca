@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import DayList from './components/DayList';
+import Header from './components/Header';
+import Day from './components/Day';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import EmptyPage from './components/EmptyPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route path="/" exact>
+            <DayList />
+          </Route>
+          <Route path="/day/:day">
+            <Day />
+          </Route>
+          <Route>
+            <EmptyPage />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
