@@ -1,17 +1,11 @@
 import { Link } from "react-router-dom";
 import {useState, useEffect} from "react";
 import axios from 'axios';
+import useGet from "../hooks/useGet";
 
 function DayList(){
-    const [days, setDays] = useState([]);
-    useEffect(()=>{
-        axios.get('http://localhost:3001/days').then(res => {
-            setDays(res.data);
-            
-        }).catch(e =>{
-            console.log(e);
-        })
-    },[]);
+    const days = useGet('http://localhost:3001/days');
+    
     return(
         <ul className = "list_day">
             {days.map(day => (
