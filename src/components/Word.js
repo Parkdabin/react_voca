@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+
 
 function Word({word}) {
+    const [isShow, setIsShow] = useState(false);
+    const [isDone, setIsDone] = useState(word.isDone);
     function toggleShow(){
         setIsShow(!isShow);
     }
 
     function toggleDone(){
-        setIsDone(!isDone);
+        // setIsDone(!isDone);
+        axios.put(`http://localhost:3001/words/${word.id}`, {
+            ...word,
+            isDone: !isDone,
+        }).then(res => {
+            if(res.statusText==='OK'){
+                setIsDone(!isDone);
+            }
+        })
     }
-    const [isShow, setIsShow] = useState(false);
-    const [isDone, setIsDone] = useState(word.isDone);
-
 
     return (
         <tr className={isDone ? "off" : ''}>

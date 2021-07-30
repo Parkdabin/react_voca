@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import {useState, useEffect} from "react";
-import axios from 'axios';
+import React from "react";
 import useGet from "../hooks/useGet";
 
 function DayList(){
