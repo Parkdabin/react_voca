@@ -1,24 +1,40 @@
 {
   "days": [
     {
-      "id": 1,
-      "day": 1
+      "day": 1,
+      "id": 1
     },
     {
-      "id": 2,
-      "day": 2
+      "day": 2,
+      "id": 2
     },
     {
-      "id": 3,
-      "day": 3
+      "day": 3,
+      "id": 3
+    },
+    {
+      "day": 4,
+      "id": 4
+    },
+    {
+      "day": 5,
+      "id": 5
+    },
+    {
+      "day": 6,
+      "id": 6
+    },
+    {
+      "day": 7,
+      "id": 7
     }
   ],
   "words": [
     {
       "id": 1,
       "day": 1,
-      "eng": "book",
-      "kor": "책",
+      "eng": "car",
+      "kor": "차",
       "isDone": false
     },
     {
@@ -26,13 +42,6 @@
       "day": 1,
       "eng": "good",
       "kor": "좋은",
-      "isDone": true
-    },
-    {
-      "id": 3,
-      "day": 2,
-      "eng": "car",
-      "kor": "자동차",
       "isDone": false
     },
     {
@@ -50,11 +59,81 @@
       "isDone": false
     },
     {
-      "id": 6,
-      "day": 3,
-      "eng": "pencil",
-      "kor": "연필",
-      "isDone": false
+      "day": "3",
+      "eng": "window",
+      "kor": "창문",
+      "isDone": false,
+      "id": 17
+    },
+    {
+      "day": "1",
+      "eng": "window",
+      "kor": "창문",
+      "isDone": false,
+      "id": 18
+    },
+    {
+      "day": "2",
+      "eng": "computer",
+      "kor": "컴퓨터",
+      "isDone": false,
+      "id": 19
+    },
+    {
+      "day": "4",
+      "eng": "house",
+      "kor": "집",
+      "isDone": false,
+      "id": 20
+    },
+    {
+      "day": "1",
+      "eng": "apple",
+      "kor": "사과",
+      "isDone": false,
+      "id": 21
+    },
+    {
+      "day": "1",
+      "eng": "HI",
+      "kor": "안녕",
+      "isDone": false,
+      "id": 22
+    },
+    {
+      "day": "1",
+      "eng": "Hello",
+      "kor": "안녕",
+      "isDone": false,
+      "id": 23
+    },
+    {
+      "day": "3",
+      "eng": "good",
+      "kor": "좋은",
+      "isDone": false,
+      "id": 24
+    },
+    {
+      "day": "5",
+      "eng": "Oh",
+      "kor": "오",
+      "isDone": false,
+      "id": 25
+    },
+    {
+      "day": "6",
+      "eng": "Hey",
+      "kor": "이봐",
+      "isDone": false,
+      "id": 26
+    },
+    {
+      "day": "7",
+      "eng": "computer",
+      "kor": "컴퓨터",
+      "isDone": false,
+      "id": 27
     }
   ]
 }

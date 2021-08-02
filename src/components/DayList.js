@@ -4,6 +4,10 @@ import useGet from "../hooks/useGet";
 
 function DayList(){
     const days = useGet('http://localhost:3001/days');
+
+    if(days.length===0){
+        return<span>Loading...</span>
+    }
     
     return(
         <ul className = "list_day">

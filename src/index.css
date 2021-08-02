@@ -119,3 +119,15 @@ button{
   height: 40px;
   font-size: 20px;
 }
+
+.pagemove{
+  display: flex;
+}
+.pagemove a{
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color:#eee;
+  font-weight: bold;
+}
